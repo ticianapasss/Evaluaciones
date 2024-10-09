@@ -8,7 +8,31 @@ body {
     text-align: center;
     font-style: oblique;
 }
-
+h2 {
+    font-size: 110%;
+    font-style: italic;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+#botoncontar{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+#totalboton {
+    place-items: center;
+    border: none; 
+    margin-top: 1%;
+    color: rgb(255, 255, 255); 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    font-style: oblique;
+    font-weight: bolder;
+    border-radius: 5px; background-color: rgb(0, 0, 0);} 
+    .secondary:hover {background: #ddd; color: white;
+    place-items: center;
+}
 .EquipoRojo {
     background-color: rgb(192, 17, 17);
     display: grid;
@@ -25,9 +49,7 @@ body {
     margin: auto;
     margin-right: 30%;
     margin-left: 30%;
-
 }
-
 
 .estboton {
     border: none; 
