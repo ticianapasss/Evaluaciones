@@ -8,6 +8,7 @@ body {
     text-align: center;
     font-style: oblique;
 }
+
 h2 {
     font-size: 110%;
     font-style: italic;
@@ -51,7 +52,19 @@ h2 {
     margin-left: 30%;
 }
 
-.estboton {
+#estbotonroj {
+    border: none; 
+    margin-top: 1%;
+    color: black; 
+    padding: 8px 16px; 
+    cursor: pointer; 
+    font-style: oblique;
+    font-weight: bolder;
+    border-radius: 5px; background-color: rgb(221, 216, 216); border: 2px solid #e7e7e7;} 
+    .secondary:hover {background: #ddd; color: white;
+}
+
+#estbotonneg {
     border: none; 
     margin-top: 1%;
     color: black; 

@@ -17,34 +17,32 @@ const HandballNegra = document.getElementById ("HandballNegra") as HTMLInputElem
 const AjedrezNegra = document.getElementById ("AjedrezNegra") as HTMLInputElement;
 const ResistenciaNegra = document.getElementById ("ResistenciaNegrSa") as HTMLInputElement;
 
-const OutputTribuRoja= document.getElementById(TribuRoja)as HTMLInputElement;
-const OutputTribuNegra= document.getElementById(TribuNegra)as HTMLInputElement;
+const OutputTribuRoja= document.getElementById ("estbotonroj") as HTMLInputElement;
+const OutputTribuNegra= document.getElementById ("estbotonneg") as HTMLInputElement;
 
 function contar (): void {
-    let: ValorHandballRoja : number = parseInt (HandballRoja.value, 10);
-    let: ValorAjedrezRoja : number = parseInt (AjedrezRoja.value, 10);
-    let: ValorResistenciaRoja : number = parseInt (ResistenciaRoja.value, 10);
 
+    let ValorHandballRoja : number = parseInt (HandballRoja.value, 10);
+    let ValorAjedrezRoja : number = parseInt (AjedrezRoja.value, 10);
+    let ValorResistenciaRoja : number = parseInt (ResistenciaRoja.value, 10);
     
-    let: ValorHandballNegra : number = parseInt (HandballNegra.value, 10);
-    let: ValorAjedrezNegra : number = parseInt (AjedrezNegra.value, 10);
-    let: ValorResistenciaNegra : number = parseInt (ResistenciaNegra.value, 10);
+    let ValorHandballNegra : number = parseInt (HandballNegra.value, 10);
+    let ValorAjedrezNegra : number = parseInt (AjedrezNegra.value, 10);
+    let ValorResistenciaNegra : number = parseInt (ResistenciaNegra.value, 10);
 
     TribuRoja.punto += ValorHandballRoja + ValorAjedrezRoja + ValorResistenciaRoja ;
-    TribuNegra.punto +=ValorHandballNegra + ValorHandballNegra + ValorResistenciaNegra; 
+    TribuNegra.punto += ValorHandballNegra + ValorHandballNegra + ValorResistenciaNegra; 
 
     OutputTribuRoja.innerText += TribuRoja.punto.toString();
     OutputTribuNegra.innerText += TribuNegra.punto.toString();
 
+    var EquipoGanador = document.getElementById ("totalboton") as HTMLElement;
+
     if (TribuRoja.punto > TribuNegra.punto) {
-
         EquipoGanador.innerText += "Equipo Rojo";
-        
     }
+
     if (TribuNegra.punto > TribuRoja.punto) {
-        
         EquipoGanador.innerText += "Equipo Negro";
-
     }
-
 }
