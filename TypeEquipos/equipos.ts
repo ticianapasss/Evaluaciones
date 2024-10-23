@@ -19,36 +19,43 @@ const ResistenciaNegra = document.getElementById ("ResistenciaNegra") as HTMLInp
 
 const OutputTribuRoja= document.getElementById ("estbotonroj") as HTMLElement;
 const OutputTribuNegra= document.getElementById ("estbotonneg") as HTMLElement; // ver
+const OutputTotal= document.getElementById("totalboton") as HTMLElement;
 
-function contar (): void {
+function contarroja (): void {
 
     let ValorHandballRoja : number = parseInt (HandballRoja.value, 10);
     let ValorAjedrezRoja : number = parseInt (AjedrezRoja.value, 10);
     let ValorResistenciaRoja : number = parseInt (ResistenciaRoja.value, 10);
-    
+
+    TribuRoja.punto = ValorHandballRoja + ValorAjedrezRoja + ValorResistenciaRoja ;
+
+    OutputTribuRoja.innerText = TribuRoja.punto.toString();
+
+}
+
+function contarnegra (): void {
+        
     let ValorHandballNegra : number = parseInt (HandballNegra.value, 10);
     let ValorAjedrezNegra : number = parseInt (AjedrezNegra.value, 10);
     let ValorResistenciaNegra : number = parseInt (ResistenciaNegra.value, 10);
 
-    TribuRoja.punto += ValorHandballRoja + ValorAjedrezRoja + ValorResistenciaRoja ;
-    TribuNegra.punto += ValorHandballNegra + ValorHandballNegra + ValorResistenciaNegra; 
+    TribuNegra.punto = ValorHandballNegra + ValorAjedrezNegra + ValorResistenciaNegra; 
 
-    OutputTribuRoja.innerText += TribuRoja.punto.toString();
-    OutputTribuNegra.innerText += TribuNegra.punto.toString();
+    OutputTribuNegra.innerText = TribuNegra.punto.toString();
 
 }
+
 function mostrar () {
  let EquipoGanador = "";
 
     if (TribuRoja.punto > TribuNegra.punto) {
-        EquipoGanador = "La Tribu ganadora es la Tribu Roja";
+        EquipoGanador = "La Tribu ganadora es la Tribu Roja con: " + TribuRoja.punto + " puntos.";
     }
-
     if (TribuNegra.punto > TribuRoja.punto) {
-        EquipoGanador = "La Tribu ganadora es la Tribu Negra";
+        EquipoGanador = "La Tribu ganadora es la Tribu Negra con: " + TribuNegra.punto + " puntos.";
     }
-
-    OutputTribuRoja.innerText = EquipoGanador;
-
-
+    if (TribuNegra.punto == TribuRoja.punto){
+        EquipoGanador = "Las Tribus Empataron con: " + TribuNegra.punto + " puntos.";
+    }
+    OutputTotal.innerText = EquipoGanador;
 }

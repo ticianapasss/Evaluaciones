@@ -21,7 +21,7 @@
             <input type="number" class="casillas" placeholder="Ajedrez" id="AjedrezRoja">
             <h2>Resistencia</h2>
             <input type="number" class="casillas" placeholder="Resistencia" id="ResistenciaRoja">
-            <button id="estbotonroj" onclick=""> Cargar Puntos</button>   
+            <button id="estbotonroj" onclick="contarroja()"> Cargar Puntos</button>   
             <br>
             </div>
 <br>
@@ -33,11 +33,12 @@
             <input type="number" class="casillas" placeholder="Ajedrez" id="AjedrezNegra">
             <h2>Resistencia</h2>
             <input type="number" class="casillas" placeholder="Resistencia" id="ResistenciaNegra">
-            <button id="estbotonneg"> Cargar Puntos</button>
+            <button id="estbotonneg" onclick="contarnegra()"> Cargar Puntos</button>
             <br> 
         </div>  
+        
         <div id = "botoncontar">
-        <button id="totalboton"> Contar Puntos </button> 
+        <button id="totalboton" onclick="mostrar()"> Contar Puntos </button> 
         <p id = "resultado" > </p>
         </div>
 
