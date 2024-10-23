@@ -17,8 +17,8 @@ const HandballNegra = document.getElementById ("HandballNegra") as HTMLInputElem
 const AjedrezNegra = document.getElementById ("AjedrezNegra") as HTMLInputElement;
 const ResistenciaNegra = document.getElementById ("ResistenciaNegrSa") as HTMLInputElement;
 
-const OutputTribuRoja= document.getElementById ("estbotonroj") as HTMLInputElement;
-const OutputTribuNegra= document.getElementById ("estbotonneg") as HTMLInputElement;
+const OutputTribuRoja= document.getElementById ("estbotonroj") as HTMLElement;
+const OutputTribuNegra= document.getElementById ("estbotonneg") as HTMLElement; // ver
 
 function contar (): void {
 
@@ -36,13 +36,19 @@ function contar (): void {
     OutputTribuRoja.innerText += TribuRoja.punto.toString();
     OutputTribuNegra.innerText += TribuNegra.punto.toString();
 
-    var EquipoGanador = document.getElementById ("totalboton") as HTMLElement;
+}
+function mostrar () {
+ let EquipoGanador = "";
 
     if (TribuRoja.punto > TribuNegra.punto) {
-        EquipoGanador.innerText += "Equipo Rojo";
+        EquipoGanador = "La Tribu ganadora es la Tribu Roja";
     }
 
     if (TribuNegra.punto > TribuRoja.punto) {
-        EquipoGanador.innerText += "Equipo Negro";
+        EquipoGanador = "La Tribu ganadora es la Tribu Negra";
     }
+
+    OutputTribuRoja.innerText = EquipoGanador;
+
+
 }
