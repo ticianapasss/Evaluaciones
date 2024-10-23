@@ -9,9 +9,9 @@ var AjedrezRoja = document.getElementById("AjedrezRoja");
 var ResistenciaRoja = document.getElementById("ResistenciaRoja");
 var HandballNegra = document.getElementById("HandballNegra");
 var AjedrezNegra = document.getElementById("AjedrezNegra");
-var ResistenciaNegra = document.getElementById("ResistenciaNegrSa");
-var OutputTribuRoja = document.getElementById("TribuRoja");
-var OutputTribuNegra = document.getElementById("TribuNegra");
+var ResistenciaNegra = document.getElementById("ResistenciaNegra");
+var OutputTribuRoja = document.getElementById("estbotonroj");
+var OutputTribuNegra = document.getElementById("estbotonneg"); // ver
 function contar() {
     var ValorHandballRoja = parseInt(HandballRoja.value, 10);
     var ValorAjedrezRoja = parseInt(AjedrezRoja.value, 10);
@@ -23,11 +23,14 @@ function contar() {
     TribuNegra.punto += ValorHandballNegra + ValorHandballNegra + ValorResistenciaNegra;
     OutputTribuRoja.innerText += TribuRoja.punto.toString();
     OutputTribuNegra.innerText += TribuNegra.punto.toString();
-    var EquipoGanador = document.getElementById("resultado");
+}
+function mostrar() {
+    var EquipoGanador = "";
     if (TribuRoja.punto > TribuNegra.punto) {
-        EquipoGanador.innerText += "Equipo Rojo";
+        EquipoGanador = "La Tribu ganadora es la Tribu Roja";
     }
     if (TribuNegra.punto > TribuRoja.punto) {
-        EquipoGanador.innerText += "Equipo Negro";
+        EquipoGanador = "La Tribu ganadora es la Tribu Negra";
     }
+    OutputTribuRoja.innerText = EquipoGanador;
 }

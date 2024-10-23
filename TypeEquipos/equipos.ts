@@ -15,7 +15,7 @@ const ResistenciaRoja = document.getElementById ("ResistenciaRoja") as HTMLInput
 
 const HandballNegra = document.getElementById ("HandballNegra") as HTMLInputElement;
 const AjedrezNegra = document.getElementById ("AjedrezNegra") as HTMLInputElement;
-const ResistenciaNegra = document.getElementById ("ResistenciaNegrSa") as HTMLInputElement;
+const ResistenciaNegra = document.getElementById ("ResistenciaNegra") as HTMLInputElement;
 
 const OutputTribuRoja= document.getElementById ("estbotonroj") as HTMLElement;
 const OutputTribuNegra= document.getElementById ("estbotonneg") as HTMLElement; // ver
