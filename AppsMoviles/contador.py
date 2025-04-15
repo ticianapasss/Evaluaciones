@@ -3,17 +3,17 @@ from kivymd.uix.label import MDLabel  # Error: debería ser MDLabel
 from kivymd.uix.button import MDRaisedButton
 from kivymd.uix.boxlayout import MDBoxLayout
 from kivymd.uix.screen import Screen
-from kivymd.uix.toolbar import MDToolbar
+from kivymd.uix.toolbar import MDTopAppBar
 
 class ContadorApp(MDApp):
     def build(self):
         self.contador = 0  # sacamos comillas pq si no sería string
 
         layout = MDBoxLayout(orientation="vertical", padding=20)  # cambiamos la orientacion horizontal por vertical
-        layout.add_widget(MDToolbar(title="Contador KivyMD"))  # usar 'title'
+        layout.add_widget(MDTopAppBar(title="Contador KivyMD"))  # usar 'title'
 
         self.label = MDLabel(
-            text=str(self.contador), #convertimos en string para poder mostrar en pantalla
+            text=str(self.contador), #convertimos en string para mostrar en pantalla
             halign="center",
             font_style="H3"
         )
@@ -40,4 +40,4 @@ class ContadorApp(MDApp):
         self.label.text = str(self.contador)
 
 if __name__ == "__main__":
-    MyApp().run()
+    MDApp().run()
