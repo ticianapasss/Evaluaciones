@@ -7,13 +7,13 @@ from kivymd.uix.toolbar import MDToolbar
 
 class ContadorApp(MDApp):
     def build(self):
-        self.contador = 0  # Error: debería ser número
+        self.contador = 0  # sacamos comillas pq si no sería string
 
-        layout = MDBoxLayout(orientation="vertical", padding=20)  # Error: debería ser vertical
-        layout.add_widget(MDToolbar(title="Contador KivyMD"))  # Error: argumento correcto es title
+        layout = MDBoxLayout(orientation="vertical", padding=20)  # cambiamos la orientacion horizontal por vertical
+        layout.add_widget(MDToolbar(title="Contador KivyMD"))  # usar 'title'
 
         self.label = MDLabel(
-            text=self.contador,
+            text=str(self.contador), #convertimos en string para poder mostrar en pantalla
             halign="center",
             font_style="H3"
         )
