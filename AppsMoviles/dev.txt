@@ -1,0 +1,1 @@
+La lógica de incremento/decremento está bien, pero el código no arranca porque se invoca MDApp().run() en lugar de ContadorApp().run()
