@@ -40,4 +40,4 @@ class ContadorApp(MDApp):
         self.label.text = str(self.contador)
 
 if __name__ == "__main__":
-    MDApp().run()
+    ContadorApp().run()
